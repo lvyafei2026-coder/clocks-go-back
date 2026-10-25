@@ -239,7 +239,7 @@
       "DTSTART:" + icsStamp(remind),
       "DTEND:" + icsStamp(new Date(remind.getTime() + 30 * 60000)),
       "SUMMARY:Clocks go back tonight (fall back 1 hour)",
-      "DESCRIPTION:Daylight saving time ends — turn clocks back one hour before bed. Details: https://clocks.toolara.dev/",
+      "DESCRIPTION:Daylight saving time ends — turn clocks back one hour before bed. Details: https://clocksgoback.toolara.dev/",
       "BEGIN:VALARM", "TRIGGER:-PT0M", "ACTION:DISPLAY",
       "DESCRIPTION:Clocks go back tonight", "END:VALARM",
       "END:VEVENT", "END:VCALENDAR"
