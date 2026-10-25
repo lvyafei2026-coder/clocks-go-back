@@ -205,19 +205,11 @@ tr.tonight-row td { background: #f0fdf4; }
 .site-footer ul.fa-list a .fa-new { color: #46a758; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.06em; margin-left: 6px; }
 .site-footer .fa-contact { margin-top: 18px; }
 .site-footer .fa-contact-h { margin: 42px 0 10px !important; color: #f8fafc; font-size: 0.95rem; font-weight: 650; }
-.site-footer-grid { grid-template-columns: minmax(0,0.85fr) minmax(0,2.65fr) !important; gap: 40px !important; }
-.site-footer-column:nth-child(2) { grid-row: 1/span 2 !important; }
-.site-footer-column:nth-child(3) { grid-column: 1 !important; grid-row: 2 !important; }
-.site-footer-explore { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px 20px; align-content: start; }
-.site-footer-group { min-width: 0; }
-.site-footer-group-title { margin: 0 0 9px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.16); color: #f8fafc; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: .75; }
-.site-footer-group .site-footer-links { display: grid !important; grid-template-columns: minmax(0,1fr) !important; gap: 7px; font-size: 0.85rem; line-height: 1.4; }
-@media (max-width: 960px) {
-  .site-footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 34px !important; }
-  .site-footer-column:nth-child(2) { grid-row: auto !important; }
-  .site-footer-column:nth-child(3) { grid-column: auto !important; grid-row: auto !important; }
-  .site-footer-explore { grid-template-columns: repeat(2, minmax(0,1fr)); }
-}
+.site-footer-grid { grid-template-columns: 1.05fr 1.35fr 1.35fr 0.55fr !important; gap: 44px !important; }
+/* 覆盖旧版 nth-child 网格定位，四列横向排布 */
+.site-footer .site-footer-column:nth-child(2), .site-footer .site-footer-column:nth-child(3), .site-footer .site-footer-column:nth-child(4) { grid-row: auto !important; grid-column: auto !important; display: block !important; }
+@media (max-width: 960px) { .site-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; } }
+@media (max-width: 640px) { .site-footer-grid { grid-template-columns: 1fr !important; gap: 26px !important; } }
 @media (max-width: 760px) { .site-footer { padding: 36px 20px 20px !important; } .site-footer-grid { grid-template-columns: 1fr !important; gap: 28px !important; } .site-footer-bottom { margin-top: 28px; } }
 @media (max-width: 560px) {
   .hero { padding: 40px 16px 72px; }
